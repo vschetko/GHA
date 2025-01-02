@@ -1,0 +1,17 @@
+name: SimpleAction
+on: workflow_dispatch
+jobs:
+  first_job:
+    runs-on: macos-latest
+    steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+        - name: Run a one-line script
+          run: echo First job finished
+  second_job:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout
+          uses: actions/checkout@v4
+        - name: Run a one-line script
+          run: echo Second job finished
